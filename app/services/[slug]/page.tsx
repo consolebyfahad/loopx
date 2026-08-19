@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import TextReveal from "@/components/animations/TextReveal";
+import SectionHeader from "@/components/ui/SectionHeader";
 import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import { services, getServiceBySlug } from "@/data/services";
 import CTASection from "@/components/sections/CTASection";
@@ -36,11 +35,12 @@ export default async function ServiceDetailPage({ params }: Props) {
     <>
       <section className="pt-32 md:pt-40 section-padding-x">
         <div className="max-w-[1920px] mx-auto">
-          <SectionLabel>{service.number}</SectionLabel>
-          <TextReveal
-            text={service.title.toUpperCase()}
+          <SectionHeader
             as="h1"
-            className="text-display max-w-4xl mb-8"
+            label={service.number}
+            title={service.title.endsWith(".") ? service.title : `${service.title}.`}
+            subtitle={service.description}
+            className="mb-8"
           />
           <Reveal delay={0.2}>
             <p className="text-body-lg text-[var(--color-muted)] max-w-2xl mb-4">

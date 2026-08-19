@@ -1,7 +1,6 @@
-import TextReveal from "@/components/animations/TextReveal";
 import ImageReveal from "@/components/animations/ImageReveal";
 import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 import { companyValues } from "@/data/testimonials";
 import { images } from "@/data/images";
@@ -12,11 +11,11 @@ export default function AboutSection() {
       <div className="max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
-            <SectionLabel>About</SectionLabel>
-            <TextReveal
-              text={"WHO IS\nLOOPX?"}
-              as="h2"
-              className="text-display max-w-lg mb-8"
+            <SectionHeader
+              label="About"
+              title="Who is LOOPX?"
+              subtitle="A product studio that thinks first."
+              className="mb-8"
             />
 
             <Reveal delay={0.2}>

@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { services } from "@/data/services";
 
@@ -15,20 +14,12 @@ export default function ServicesSection() {
   return (
     <section className="section-padding section-padding-x bg-[var(--color-black)] relative">
       <div className="max-w-[1920px] mx-auto">
-        <SectionLabel>Services</SectionLabel>
-        <h2 className="text-display max-w-4xl mb-4">
-          WHAT CAN WE
-          <br />
-          BUILD TOGETHER?
-        </h2>
-
-        <Reveal delay={0.1}>
-          <p className="text-body-lg text-[var(--color-muted)] max-w-2xl mb-10 md:mb-12">
-            From mobile apps to SaaS platforms and company websites — we cover the
-            full spectrum of software development. Hover a service to explore, or tap
-            through on mobile.
-          </p>
-        </Reveal>
+        <SectionHeader
+          label="Services"
+          title="What we build together."
+          subtitle="Apps, SaaS, websites, and custom software."
+          className="mb-10 md:mb-12"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="lg:col-span-7">

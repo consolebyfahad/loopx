@@ -3,9 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-import TextReveal from "@/components/animations/TextReveal";
-import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 import { processStages } from "@/data/process";
 import { cn } from "@/lib/utils";
 
@@ -36,19 +34,13 @@ export default function ProcessSection() {
     >
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="section-padding-x w-full max-w-[1920px] mx-auto">
-          <SectionLabel light>Process</SectionLabel>
-          <TextReveal
-            text={"FROM FIRST IDEA\nTO REAL PRODUCT."}
-            as="h2"
-            className="text-display max-w-4xl mb-6 text-[var(--color-black)]"
+          <SectionHeader
+            light
+            label="Process"
+            title="From idea to real product."
+            subtitle="Six stages from discovery through launch."
+            className="mb-10 md:mb-14"
           />
-
-          <Reveal delay={0.1}>
-            <p className="text-lg text-[var(--color-black)]/60 max-w-xl mb-10 md:mb-14">
-              Six structured stages. No black boxes. You stay involved from discovery
-              through launch and beyond.
-            </p>
-          </Reveal>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="relative">

@@ -4,8 +4,9 @@
  * that matches its section content.
  */
 export const images = {
-  /** Dark tech/code hero background */
+  /** Original hero background */
   hero: "/images/hero-bg.jpg",
+  earth: "/images/earth.jpg",
   og: "/images/og-image.jpg",
 
   about: {
@@ -16,21 +17,21 @@ export const images = {
   },
 
   services: {
-    /** Smartphone on desk */
+    /** Mobile app development — smartphones & devices */
     mobile: "/images/service-mobile.jpg",
-    /** Laptop with code on screen */
+    /** Web development — coding & full-stack build */
     web: "/images/service-web.jpg",
-    /** Analytics dashboard on monitor */
+    /** SaaS product — analytics dashboard & metrics */
     saas: "/images/service-saas.jpg",
-    /** Modern office building */
+    /** Business website — professional web presence */
     business: "/images/service-business.jpg",
-    /** Creative workspace / laptop */
+    /** Portfolio website — creative single-page showcase */
     portfolio: "/images/service-portfolio.jpg",
-    /** Developer coding at desk */
+    /** Custom software — tailored development at desk */
     custom: "/images/service-custom.jpg",
-    /** UI design on screen */
+    /** UI/UX design — wireframes, prototypes & product design */
     design: "/images/service-design.jpg",
-    /** Team meeting / collaboration */
+    /** Maintenance & growth — team strategy & scaling */
     growth: "/images/service-growth.jpg",
   },
 

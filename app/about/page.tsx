@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import TextReveal from "@/components/animations/TextReveal";
 import ImageReveal from "@/components/animations/ImageReveal";
 import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 import CTASection from "@/components/sections/CTASection";
 import { companyValues } from "@/data/testimonials";
 import { images } from "@/data/images";
@@ -47,11 +46,12 @@ export default function AboutPage() {
     <>
       <section className="pt-32 md:pt-40 section-padding-x pb-16">
         <div className="max-w-[1920px] mx-auto">
-          <SectionLabel>About LOOPX</SectionLabel>
-          <TextReveal
-            text={"IDEAS INTO\nPRODUCTS."}
+          <SectionHeader
             as="h1"
-            className="text-display max-w-3xl mb-8"
+            label="About LOOPX"
+            title="Ideas into products."
+            subtitle="Software for founders and growing businesses."
+            className="mb-8"
           />
           <Reveal delay={0.2}>
             <p className="text-body-lg text-[var(--color-muted)] max-w-2xl mb-4">
@@ -123,23 +123,13 @@ export default function AboutPage() {
       </section>
 
       <section className="section-padding section-padding-x bg-[var(--color-navy)]">
-        <div className="max-w-[1920px] mx-auto text-center">
-          <TextReveal
-            text={"BUILT ON\nTRUST & CRAFT."}
-            as="h2"
-            className="text-display max-w-3xl mx-auto mb-8"
+        <div className="max-w-[1920px] mx-auto">
+          <SectionHeader
+            align="center"
+            label="Our Approach"
+            title="Built on trust and craft."
+            subtitle="Product thinking, design, and engineering."
           />
-          <Reveal delay={0.2}>
-            <p className="text-body-lg text-[var(--color-muted)] max-w-2xl mx-auto mb-4">
-              Great software comes from the intersection of product thinking,
-              design craft, and engineering excellence. That&apos;s what we bring
-              to every project — whether it&apos;s a startup MVP or an enterprise
-              platform.
-            </p>
-            <p className="text-base text-[var(--color-muted)]/60 max-w-xl mx-auto">
-              Ready to talk? We&apos;d like to hear what you&apos;re building.
-            </p>
-          </Reveal>
         </div>
       </section>
 

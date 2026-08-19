@@ -36,7 +36,7 @@ export default function TextReveal({
             className="block"
             initial={{ y: "110%" }}
             whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: "0px", amount: 0.2 }}
+            viewport={{ once: true, margin: "-80px", amount: 0 }}
             transition={{
               duration: 1,
               delay: delay + i * 0.08,

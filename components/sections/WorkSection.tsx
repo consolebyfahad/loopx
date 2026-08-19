@@ -9,7 +9,7 @@ import {
   useMotionValueEvent,
   useReducedMotion,
 } from "framer-motion";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 import Arrow from "@/components/ui/Arrow";
 import { projects } from "@/data/projects";
@@ -72,11 +72,14 @@ function WorkSectionFallback() {
   return (
     <section className="section-padding section-padding-x bg-[var(--color-black)]">
       <div className="max-w-[1920px] mx-auto">
-        <SectionLabel>Selected Work</SectionLabel>
-        <h2 className="text-display-sm max-w-2xl mb-8">
-          BUILT TO EXIST IN THE REAL WORLD.
-        </h2>
-        <div className="space-y-16 mt-10">
+        <SectionHeader
+          size="sm"
+          label="Selected Work"
+          title="Built for the real world."
+          subtitle="Hospitality, commerce, analytics, and community."
+          className="mb-10"
+        />
+        <div className="space-y-16">
           {projects.map((project) => (
             <WorkSlide key={project.id} project={project} isActive />
           ))}
@@ -118,13 +121,14 @@ export default function WorkSection() {
       <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
         {/* Compact header — gives more room to project slides */}
         <div className="section-padding-x pt-20 md:pt-24 pb-4 md:pb-5 shrink-0">
-          <div className="max-w-[1920px] mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <SectionLabel className="mb-2">Selected Work</SectionLabel>
-              <h2 className="text-display-sm max-w-xl">
-                BUILT TO EXIST IN THE REAL WORLD.
-              </h2>
-            </div>
+          <div className="max-w-[1920px] mx-auto flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <SectionHeader
+              size="sm"
+              label="Selected Work"
+              title="Built for the real world."
+              subtitle="Hospitality, commerce, analytics, and community."
+              className="mb-0"
+            />
             <Button href="/work" variant="secondary" size="sm" showArrow>
               View All Work
             </Button>

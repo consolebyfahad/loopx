@@ -1,25 +1,17 @@
 import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 import { capabilities } from "@/data/testimonials";
 
 export default function TechnologySection() {
   return (
     <section className="section-padding section-padding-x bg-[var(--color-black)]">
       <div className="max-w-[1920px] mx-auto">
-        <SectionLabel>Capabilities</SectionLabel>
-        <h2 className="text-display max-w-3xl mb-4">
-          TECHNOLOGY
-          <br />
-          THAT DELIVERS.
-        </h2>
-
-        <Reveal delay={0.1}>
-          <p className="text-body-lg text-[var(--color-muted)] max-w-2xl mb-10 md:mb-12">
-            We use a curated, battle-tested stack — not every framework under the
-            sun. The right tools for maintainable, scalable products that your team
-            can grow with long after launch.
-          </p>
-        </Reveal>
+        <SectionHeader
+          label="Capabilities"
+          title="Technology that delivers."
+          subtitle="A curated stack for scalable products."
+          className="mb-10 md:mb-12"
+        />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           {capabilities.map((group, index) => (

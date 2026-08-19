@@ -19,7 +19,7 @@ export default function Hero() {
       >
         <Image
           src={images.hero}
-          alt="Abstract technology workspace"
+          alt=""
           fill
           priority
           sizes="100vw"

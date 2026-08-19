@@ -1,7 +1,6 @@
-import TextReveal from "@/components/animations/TextReveal";
 import FadeUp from "@/components/animations/FadeUp";
 import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const highlights = [
   "Mobile apps, web platforms & SaaS products",
@@ -13,12 +12,11 @@ export default function IntroSection() {
   return (
     <section className="section-padding section-padding-x bg-[var(--color-black)]">
       <div className="max-w-[1920px] mx-auto">
-        <SectionLabel>Introduction</SectionLabel>
-
-        <TextReveal
-          text={"Software should\nmove your business forward."}
-          as="h2"
-          className="text-display max-w-5xl mb-8 md:mb-10"
+        <SectionHeader
+          label="Introduction"
+          title="Software that moves business forward."
+          subtitle="Ideas into products people actually use."
+          className="mb-10 md:mb-12"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">

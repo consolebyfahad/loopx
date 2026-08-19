@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import TextReveal from "@/components/animations/TextReveal";
+import SectionHeader from "@/components/ui/SectionHeader";
 import Reveal from "@/components/animations/Reveal";
-import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import { projects, getProjectBySlug } from "@/data/projects";
 import CTASection from "@/components/sections/CTASection";
@@ -36,14 +35,12 @@ export default async function ProjectDetailPage({ params }: Props) {
     <>
       <section className="pt-32 md:pt-40 section-padding-x">
         <div className="max-w-[1920px] mx-auto">
-          <div className="flex items-center gap-4 mb-6">
-            <SectionLabel>{project.category}</SectionLabel>
-            <span className="text-label opacity-50">{project.year}</span>
-          </div>
-          <TextReveal
-            text={project.title}
+          <SectionHeader
             as="h1"
-            className="text-display max-w-4xl mb-8"
+            label={project.category}
+            title={project.title.endsWith(".") ? project.title : `${project.title}.`}
+            subtitle={project.description}
+            className="mb-8"
           />
           <Reveal delay={0.2}>
             <p className="text-body-lg text-[var(--color-muted)] max-w-2xl mb-4">

@@ -108,6 +108,7 @@ button {
   line-height: 0.95;
   letter-spacing: -0.03em;
   font-weight: 500;
+  color: var(--color-text-light);
 }
 
 .text-display-sm {
@@ -115,6 +116,7 @@ button {
   line-height: 1;
   letter-spacing: -0.03em;
   font-weight: 500;
+  color: var(--color-text-light);
 }
 
 .text-hero {
